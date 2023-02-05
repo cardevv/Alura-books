@@ -10,5 +10,5 @@ function OrdenaPreco () {
 
 
 exibirLivros(livrosOrdenados)
-    console.log(livrosOrdenados)
+    
 }

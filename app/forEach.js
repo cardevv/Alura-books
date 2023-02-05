@@ -2,12 +2,14 @@ const InserirLivros = document.querySelector('#livros')
 
 function exibirLivros (listaLivros) {
   InserirLivros.innerHTML = ''
+  
     listaLivros.forEach(livro =>{
+      let disponibilidade = livro.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel'
         InserirLivros.innerHTML += `
 
 
         <div class="livro">
-      <img class="livro__imagens" src="${livro.imagem}" alt="${livro.alt}" />
+      <img class="${disponibilidade}" src="${livro.imagem}" alt="${livro.alt}" />
       <h2 class="livro__titulo">
       ${livro.titulo}
       </h2>
